@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%);
+    }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("/images/pattern-bg.png");
+}
+
+.wrapper .header_text {
+  color: #ffffff;
+}
+
+.address-tracker {
+  margin-top: -67px;
+}
+
+.input-search {
+  width: 100%;
+  height: 33px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: none;
+  padding: 5px;
+}
+.input-search:focus {
+  outline: none;
+}
+.search-box {
+  display: flex;
+  margin-top: 15px;
+  width: 136%;
+}
+.search-box .search_wrapper {
+  flex: 0 0 100%;
+  margin-left: -71px;
+}
+.search-box .search-button {
+  flex: 0 0 15%;
+}
+.search-button {
+  width: 37px;
+  height: 43px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.tracker {
+  position: relative;
+}
+.tracking-response {
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border-radius: 15px;
+  width: 70%;
+  margin: 0 auto;
+  position: absolute;
+  top: -76px;
+  left: 206px;
+  padding: 34px;
+  min-height: 80px;
+}
+.tracking-response p {
+  font-size: 11px;
+  color: grey;
+  font-weight: 500;
+}
+
+.ip_col {
+  border-right: 1px solid lightgrey;
+  padding-left: 14px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.isp_col {
+  padding-left: 14px;
+}
+
+.map {
+  height: 140px;
+}
+
+#mapid { 
+    height: 380px;
+    position: initial !important;
+ }
+
+ .leaflet-control-zoom.leaflet-bar.leaflet-control {
+    top: 288px;
+    left: 27px;
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    min-height: 300px;
+  }
+  .address-tracker {
+    margin-top: -113px;
+}
+  .search-box .search_wrapper {
+    margin-left: 0;
+  }
+
+  .search-box {
+    width: 85%;
+  }
+
+  .search-button {
+    margin-top: -1px;
+    height: 45px;
+  }
+
+  .tracking-response {
+    display: block;
+    text-align: center;
+    left: 0;
+    margin-left: 21px;
+    top: -125px;
+  }
+
+  .ip_col,
+  .isp_col {
+    padding: 0;
+    border: none;
+    margin-top: 16px;
+  }
+
+  .tracking-response p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 31px;
+    margin-top: 6px;
+  }
+
+  .map {
+    height: 325px;
+  }
+}
