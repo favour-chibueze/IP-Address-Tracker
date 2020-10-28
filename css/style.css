@@ -3,9 +3,13 @@
   padding: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%);
-    }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 body {
   font-family: "Rubik", sans-serif;
@@ -84,6 +88,7 @@ body {
   left: 206px;
   padding: 34px;
   min-height: 80px;
+  z-index: 10000;
 }
 .tracking-response p {
   font-size: 11px;
@@ -106,27 +111,35 @@ h4 {
   padding-left: 14px;
 }
 
-.map {
-  height: 140px;
+#map-wrapper {
+ /* position: relative;
+  height: 83vh;
+   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
-#mapid { 
-    height: 380px;
-    position: initial !important;
- }
+#mapid {
+  height:417px;
+}
 
- .leaflet-control-zoom.leaflet-bar.leaflet-control {
-    top: 288px;
-    left: 27px;
+.leaflet-control-zoom.leaflet-bar.leaflet-control {
+  top: 288px;
+  left: 27px;
 }
 
 @media screen and (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
   .wrapper {
     min-height: 300px;
   }
   .address-tracker {
     margin-top: -113px;
-}
+  }
   .search-box .search_wrapper {
     margin-left: 0;
   }
@@ -145,6 +158,8 @@ h4 {
     text-align: center;
     left: 0;
     margin-left: 21px;
+    width: 84%;
+    padding: 10px;
     top: -125px;
   }
 
@@ -161,11 +176,15 @@ h4 {
   }
 
   h4 {
-    font-size: 31px;
+    font-size: 25px;
     margin-top: 6px;
   }
 
   .map {
     height: 325px;
   }
+  .leaflet-control-zoom.leaflet-bar.leaflet-control {
+    top: 243px;
+    left: 12px;
+}
 }
