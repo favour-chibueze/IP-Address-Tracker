@@ -42,9 +42,13 @@ let ipAddress = '8.8.8.8';
 fetch('https://api.ipify.org/?format=json') .then(response => response.json()) 
   .then(data => {ipAddress = data.ip;
     getData(ipAddress)
-  });
+  })
+  // .catch(error => {
+  //   alert("Error!!")
+  // });
 
   document.getElementById("fetch_btn").addEventListener("click", function () {
     ipAddress = document.getElementById("search").value;
     getData(ipAddress);
+    // alert("Hello! I am an alert box!!");
   });
